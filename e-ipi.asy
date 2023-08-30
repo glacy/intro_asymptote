@@ -1,0 +1,17 @@
+size(0,200,IgnoreAspect);
+import graph;
+import math;
+pair z0=(0,0);
+pair z1=(-1,0);
+real theta=atan(z1.y/z1.x);
+xaxis("$x$",xmax=.5,fontsize(8pt),above=true);
+yaxis("$y$",ymax=.5,ymin=-.5,fontsize(8pt),above=true);
+dot(z1,black);
+draw(z0--z1,.5mm+red);
+label("$(-1,0)$",z1,S,fontsize(8pt));
+label("$z=e^{-i\pi}$",(-1.1,.5),S,fontsize(60pt));
+path c=arc(0,.25,0,180);
+path c1=arc(0,.25,360,180);
+draw("$\pi$",c,NE,red,Arrow,PenMargin);
+draw("$-\pi$",scale(1.1)*c1,SE,gray,Arrow,PenMargin);
+arrow("$r=1$",z1/2,NNE,red+fontsize(8pt));
